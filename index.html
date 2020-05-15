@@ -1,15 +1,40 @@
 <html>
 <style>
   body {
-    background: #C2E6F4;
-  }
+  background: #c2e6f4;
+  animation: white 5s infinite alternate;
+}
+@keyframes white {
+  0%   { background: #c2e6f4;}
+  100% { background: #F5F5F5;}
+}
+
+.tl{
+   position: absolute;
+   animation: snow 5s infinite alternate;
+}
+@keyframes snow {
+  0%   {opacity: 1}
+  100% {opacity: 0}
+}
+
+.snowground{
+   position: absolute;
+   animation: gnd 5s infinite alternate;
+}
+@keyframes gnd {
+  0%   {opacity: 1}
+  100% {opacity: 0.2}
+}
+
 </style>
 
 <body>
   <svg viewbox="0 0 1200 800">
     <g id="castle" stroke="none">
       <g id="ground">
-        <path d="M820 540 L600 680 L360 565 L600 430Z" fill="#7FB174"/>
+        <g class="snowground">
+          <path d="M820 540 L600 680 L360 565 L600 430Z" fill="#7FB174"/></g>
          <path d="M600 680 L600 720 L820 580 L820 540Z" fill="#d69b61"/>
           <path d="M360 565 L360 605 L600 720 L600 680Z" fill="#deb083"/>
               </g>
@@ -192,6 +217,7 @@
          <path d="M438 535  L429 550 L429 545 L435 535Z" fill="#CD851F"/>
          <path d="M440 536  L429 556 L429 550 L438 535Z" fill="#996600"/>
          <!--ใบใหญ่-->
+         <g class="tl">
           <path d="M428 540  L427 498 445 498 445 535Z" fill="#D97DC5"/>
           <path d="M402 533  L405 495 L427 498 L428 540Z" fill="#F5A0CF"/>
           <path d="M405 495 L427 490 L445 498 L427 498Z" fill="#FAD5F8"/>
@@ -199,7 +225,7 @@
           <path d="M450 530 L435 520 L432 532 L442 540Z" fill="#F5A0CF"/>
           <path d="M446 528 L453 527 L454 538 L442 540Z" fill="#D97DC5"/>
           <path d="M453 527 L450 520 L435 520 L446 528Z" fill="#FAD5F8"/>
-                </g>
+         </g> </g>
                   <g id="tree2">
                 <!--ต้น-->
            <path d="M575 605 L575 640 L571 639 L571 605Z" fill="#CD851F"/>
@@ -207,6 +233,7 @@
            <path d="M558 605  L572 620 L572 615 L561 605Z" fill="#CD851F"/>
            <path d="M555 606 L571 624 L571 619  L558 605Z" fill="#996600"/>
                 <!--ใบใหญ่-->
+            <g class="tl">
            <path d="M578 618 L577 576 L595 576 L595 613Z" fill="#D97DC5"/>
            <path d="M552 611 L555 573  L577 576 L578 618Z" fill="#F5A0CF"/>
            <path d="M555 573 L577 568 L595 576 L577 576Z" fill="#FAD5F8"/>
@@ -214,7 +241,7 @@
            <path d="M562 610 L547 600  L544 612 L554 620Z" fill="#F5A0CF"/>
            <path d="M558 608 L569 607 L569 617 L554 620Z" fill="#D97DC5"/>
            <path d="M569 607 L562 600 L547 600 L558 610Z" fill="#FAD5F8"/>
-                </g>
+                    </g>   </g>
 
             <g id="treebonsai1">
                 <!--ต้น-->
@@ -232,6 +259,7 @@
            <path d="M738 521 L744 532 L742 533 L735 523Z" fill="#CD851F"/>
            <path d="M734 523 L740 536 L742 533 L736 522Z" fill="#996600"/>
                 <!--ใบเล็กขวา-->
+              <g class="tl">
           <path d="M775 524 L760 526 L762 534 L780 534Z" fill="#00AA00"/>
           <path d="M775 524   L783 514 L786 526 L780 534Z" fill="#008800"/>
           <path d="M775 524 L783 514 L765 516 L760 526Z" fill="#33CC66"/>
@@ -242,7 +270,7 @@
                       <!--ใบกลาง-->
            <path d="M760 500 L745 502 L748 516 L760 520 L775 505Z"fill="#00AA00"/>
             <path d="M762 494 L760 500 L775 505 L770 495Z" fill="#008800"/>
-            <path d="M762 494 L760 500 L745 502 L752 496Z" fill="#33CC66"/>
+              <path d="M762 494 L760 500 L745 502 L752 496Z" fill="#33CC66"/></g>
                 </g>
 
             <g id="treebonsai2">
@@ -260,6 +288,7 @@
          <path d="M692 563 L698 573 L696 572 L690 562Z" fill="#CD851F"/>
          <path d="M689 563 L694 573 L696 572 L690 562Z" fill="#996600"/>
                 <!--ใบเล็กขวา-->
+              <g class="tl">
         <path d="M725 558 L716 556 L718 564 L728 566Z" fill="#00AA00"/>
          <path d="M725 558 L730 555 L731 562 L728 566Z" fill="#008800"/>
          <path d="M725 558 L730 555 L718 552 L716 556Z" fill="#33CC66"/>
@@ -271,7 +300,10 @@
           <path d="M703 548 L693 550 L701 564 L713 568 L718 553Z" fill="#00AA00"/>
          <path d="M705 542 L703 548 L718 553 L713 543Z" fill="#008800"/>
           <path d="M705 542 L703 548 L693 550 L698 544Z" fill="#33CC66"/>
+      </g>
                 </g>
+      
+      
             <g id="treebonsai3">
                 <!--ต้น-->
          <path d="M655 570 L655 620 L652 619 L652 570Z" fill="#CD851F"/>
@@ -286,7 +318,10 @@
         <path d="M640 596 L652 603 L652 600 L642 593Z" fill="#996600"/>
         <path d="M638 581  L644 592 L642 593 L635 583Z" fill="#CD851F"/>
         <path d="M634 583 L640 596 L642 593 L636 582Z" fill="#996600"/>
-                 <!--ใบเล็กขวา-->
+                 
+              
+        <g id="tree" class="tl">
+          <!--ใบเล็กขวา-->
          <path d="M675 584 L660 586 L662 594 L680 594Z" fill="#00AA00"/>
          <path d="M675 584 L683 574 L686 586 L680 594Z" fill="#008800"/>
          <path d="M675 584 L683 574 L665 576 L660 586Z" fill="#33CC66"/>
@@ -298,7 +333,8 @@
        <path d="M660 560 L645 562 L648 576 L660 580 L675 565Z" fill="#00AA00"/>
         <path d="M662 554 L660 560 L675 565 L670 555Z" fill="#008800"/>
           <path d="M662 554 L660 560 L645 562 L652 556Z" fill="#33CC66"/>
-                </g>
+         </g>
+       </g>
     </g>
   </svg>
 </body>
